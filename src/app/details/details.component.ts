@@ -32,20 +32,34 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
           </li>
         </ul>
       </section>
-      <section class="listing-apply">
-        <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
-          <label for="first-name">First Name</label>
-          <input id="first-name" type="text" formControlName="firstName" />
+      <ng-container
+        *ngIf="
+          housingLocation?.availableUnits >= 1;
+          else showNoAvailableUnitsDialog
+        "
+      >
+        <section>
+          class="listing-apply">
+          <h2 class="section-heading">Apply now to live here</h2>
+          <form [formGroup]="applyForm" (submit)="submitApplication()">
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" formControlName="firstName" />
 
-          <label for="last-name">Last Name</label>
-          <input id="last-name" type="text" formControlName="lastName" />
+            <label for="last-name">Last Name</label>
+            <input id="last-name" type="text" formControlName="lastName" />
 
-          <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email" />
-          <button type="submit" class="primary">Apply now</button>
-        </form>
-      </section>
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email" />
+            <button type="submit" class="primary">Apply now</button>
+          </form>
+        </section>
+      </ng-container>
+
+      <ng-template #showNoAvailableUnitsDialog>
+        <div>
+          <h1>No available units!</h1>
+        </div>
+      </ng-template>
     </article>
   `,
   styleUrl: './details.component.css',
