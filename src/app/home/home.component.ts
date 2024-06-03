@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { CommonModule } from '@angular/common';
 import { HousingLocation } from '../housinglocation';
-import { HousingService } from '../housing.service';
+import { FirestoreService } from '../firestore.service';
 
 @Component({
   selector: 'app-home',
@@ -35,7 +35,6 @@ export class HomeComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
 
   filteredLocationList: HousingLocation[] = [];
   filterResults(text: string) {
@@ -50,12 +49,13 @@ export class HomeComponent {
     );
   }
 
-  constructor() {
-    this.housingService
-      .getAllHousingLocations()
-      .then((housingLocationList: HousingLocation[]) => {
-        this.housingLocationList = housingLocationList;
-        this.filteredLocationList = housingLocationList;
+  constructor(private firestoreService: FirestoreService) {
+    this.firestoreService
+      .getHousingLocations()
+      .subscribe((data: HousingLocation[]) => {
+        console.log(data);
+        this.housingLocationList = data;
+        this.filteredLocationList = data;
       });
   }
 }
