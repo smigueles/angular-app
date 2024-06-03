@@ -71,9 +71,8 @@ input {
   }
 }
 .loading-spinner {
-  /* Estilos para tu spinner (puedes usar una biblioteca de spinners o crear uno personalizado) */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta según tus necesidades */
+  height: 100vh;
 }

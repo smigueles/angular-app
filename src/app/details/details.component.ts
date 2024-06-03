@@ -5,13 +5,14 @@ import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FirestoreService } from '../firestore.service';
+import { SpinnerComponent } from '../components/spinner.component';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, SpinnerComponent],
   template: `
-    <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+    <app-spinner *ngIf="isLoading"></app-spinner>
     <article *ngIf="!isLoading">
       <img
         class="listing-photo"
