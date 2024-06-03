@@ -53,7 +53,6 @@ export class HomeComponent {
     this.firestoreService
       .getHousingLocations()
       .subscribe((data: HousingLocation[]) => {
-        console.log(data);
         this.housingLocationList = data;
         this.filteredLocationList = data;
       });

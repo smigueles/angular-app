@@ -27,9 +27,7 @@ export class FirestoreService {
     const querySnapshot = await getDocs(q);
 
     if (!querySnapshot.empty) {
-      console.log(querySnapshot.docs);
       const doc = querySnapshot.docs[0];
-      console.log(doc.data());
       return { ...doc.data() } as HousingLocation;
     } else {
       return null;
