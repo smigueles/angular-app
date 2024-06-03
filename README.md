@@ -8,8 +8,9 @@ Este proyecto es el resultado de seguir el tutorial básico de Angular, exploran
 - **Data Binding:** Conexión fluida entre los datos y la interfaz de usuario, permitiendo actualizaciones en tiempo real.
 - **Routing:** Navegación entre diferentes vistas de la aplicación, creando una experiencia de usuario más intuitiva.
 - **Dependency Injection (DI):** Gestión eficiente de las dependencias de los componentes, mejorando la mantenibilidad del código.
-- **Servicios HTTP:** Comunicación con un backend simulado (`json-server`) para obtener y enviar datos, enriqueciendo la funcionalidad de la aplicación.
 - **Directivas (Eventos):** Manejo de eventos del usuario (clics, envíos de formularios, etc.) para crear interactividad en la aplicación.
+- **Firebase Firestore:** Base de datos NoSQL en la nube para almacenamiento de datos en tiempo real.
+- **Renderizado Condicional**: Mostrar u ocultar elementos de la interfaz según condiciones específicas, mejorando la interactividad y personalización.
 
 ## Instalación y Uso
 
@@ -26,17 +27,6 @@ Este proyecto es el resultado de seguir el tutorial básico de Angular, exploran
     npm install or yarn
 ```
 
-3. **Instalar json-server (si no lo tienes):**
-
-```bash
-    npm install -g json-serv
-```
-
-4. **Iniciar json-server:**
-
-```bash
-    json-server --watch db.json
-```
 
 5. **Iniciar la aplicación Angular:**
 
