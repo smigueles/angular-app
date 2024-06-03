@@ -25,7 +25,8 @@
       "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
     },
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["node"]
   },
   "angularCompilerOptions": {
     "disableTypeScriptVersionCheck": true,
