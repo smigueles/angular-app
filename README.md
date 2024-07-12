@@ -1,6 +1,6 @@
 # Mi Primera App Angular - Tutorial Básico
 
-Este proyecto es el resultado de seguir el tutorial básico de Angular, explorando conceptos fundamentales para construir aplicaciones web modernas y dinámicas.
+Este proyecto es el resultado de seguir el tutorial básico de Angular, donde se exploraron conceptos fundamentales para construir aplicaciones web modernas y dinámicas. Además, se implementó una base de datos Firestore para agregar complejidad y funcionalidad a la aplicación.
 
 ## Características Principales
 
